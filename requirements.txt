@@ -1,0 +1,2 @@
+-r requirements/common.txt
+-r requirements/test_only.txt # comment out this line if you are not running unit tests
