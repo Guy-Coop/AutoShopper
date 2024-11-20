@@ -19,7 +19,7 @@ def add_recipes(recipe_1: Recipe, recipe_2: Recipe, new_name: str = "") -> Recip
     :return:            the combined recipe
     """
 
-    combined = Recipe(
+    return Recipe(
         name=new_name,
         tags=recipe_1.tags + recipe_2.tags,
         will_need_ingredients=add_ingredients_lists(
