@@ -1,0 +1,88 @@
+{
+    "name": "Salmon with Black Beans",
+    "tags": [
+        "dietary:fish",
+        "carb:potato",
+        "healthy",
+        "babyFriendly:medium"
+    ],
+    "will_need_ingredients": [
+        {
+            "name": "Salmon",
+            "amount": 2.0,
+            "unit": "fillets"
+        },
+        {
+            "name": "Black Beans",
+            "amount": 1.0,
+            "unit": "tin"
+        },
+        {
+            "name": "Red Pepper",
+            "amount": 2.0,
+            "unit": null
+        },
+        {
+            "name": "Lime",
+            "amount": 1.0,
+            "unit": null
+        },
+        {
+            "name": "Garlic Clove",
+            "amount": 2.0,
+            "unit": null
+        },
+        {
+            "name": "New Potatoes",
+            "amount": 8.0,
+            "unit": null
+        },
+        {
+            "name": "Avocado",
+            "amount": 1.0,
+            "unit": null
+        },
+        {
+            "name": "Mango",
+            "amount": 1.0,
+            "unit": null
+        },
+        {
+            "name": "Red Chilli",
+            "amount": 1.0,
+            "unit": null
+        }
+    ],
+    "might_need_ingredients": [
+        {
+            "name": "Smoked Paprika",
+            "amount": 1,
+            "unit": null
+        },
+        {
+            "name": "Oregano",
+            "amount": 1,
+            "unit": null
+        },
+        {
+            "name": "Cayenne Pepper",
+            "amount": 1,
+            "unit": null
+        },
+        {
+            "name": "Brown Sugar",
+            "amount": 1,
+            "unit": null
+        },
+        {
+            "name": "Olive Oil",
+            "amount": 1,
+            "unit": null
+        },
+        {
+            "name": "Red Onion",
+            "amount": 1.0,
+            "unit": null
+        }
+    ]
+}
