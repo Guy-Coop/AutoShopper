@@ -1,7 +1,8 @@
-from dataclasses import dataclass, field
-from .ingredient import add_ingredients_lists, Ingredient
-from pathlib import Path
 import json
+from dataclasses import dataclass
+from pathlib import Path
+
+from .ingredient import add_ingredients_lists, Ingredient
 
 
 @dataclass

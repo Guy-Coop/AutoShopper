@@ -1,6 +1,8 @@
-from lib.backend.recipe import Recipe, add_recipes
-from lib.backend.ingredient import Ingredient
 import json
+
+from lib.backend.ingredient import Ingredient
+from lib.backend.recipe import Recipe, add_recipes
+
 
 def test_add_recipe():
     r1 = Recipe(
@@ -25,6 +27,7 @@ def test_add_recipe():
     result = add_recipes(r1, r2, "name3")
     assert result == expected
 
+
 def test_to_dict():
     r = Recipe(
         "name1",
@@ -36,12 +39,8 @@ def test_to_dict():
     expected = {
         "name": "name1",
         "tags": ["tag1"],
-        "will_need_ingredients": [
-            {"name": "A", "amount": 1, "unit": "g"}
-        ],
-        "might_need_ingredients": [
-            {"name": "C", "amount": 1, "unit": "g"}
-        ],
+        "will_need_ingredients": [{"name": "A", "amount": 1, "unit": "g"}],
+        "might_need_ingredients": [{"name": "C", "amount": 1, "unit": "g"}],
     }
     assert r.to_dict() == expected
 
@@ -50,12 +49,8 @@ def test_from_json(tmp_path):
     source_dict = {
         "name": "name1",
         "tags": ["tag1"],
-        "will_need_ingredients": [
-            {"name": "A", "amount": 1, "unit": "g"}
-        ],
-        "might_need_ingredients": [
-            {"name": "C", "amount": 1, "unit": "g"}
-        ],
+        "will_need_ingredients": [{"name": "A", "amount": 1, "unit": "g"}],
+        "might_need_ingredients": [{"name": "C", "amount": 1, "unit": "g"}],
     }
 
     expected = Recipe(

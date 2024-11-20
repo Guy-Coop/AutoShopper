@@ -1,7 +1,8 @@
-from lib.backend.recipe import Recipe
-from lib.backend.ingredient import Ingredient
-from pathlib import Path
 import json
+from pathlib import Path
+
+from lib.backend.ingredient import Ingredient
+from lib.backend.recipe import Recipe
 
 
 def _ingredient_from_input(user_input: str) -> Ingredient:
