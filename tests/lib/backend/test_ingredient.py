@@ -14,7 +14,7 @@ from lib.backend.ingredient import Ingredient, add_ingredients_lists
         ),
         pytest.param(
             Ingredient("Chicken Breast", 0.5, "lb"),
-            Ingredient("Chicken Breast", 0.5, "lb"),
+            Ingredient("Chicken Breast", 0.25, "lb"),
             Ingredient("Chicken Breast", 0.75, "lb"),
             id="float_lb",
         ),
