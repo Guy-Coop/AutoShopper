@@ -1,10 +1,11 @@
 import json
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Iterable
+from typing import Iterable, Optional
 
 from .ingredient import add_ingredients_lists, Ingredient
 
+RECIPES_PATH = Path(__file__).parent.parent.parent / "recipes"
 
 @dataclass
 class Recipe:
@@ -12,6 +13,7 @@ class Recipe:
     tags: list[str]
     will_need_ingredients: list[Ingredient]
     might_need_ingredients: list[Ingredient]
+    image: Optional[str] = None
 
     def to_dict(self):
         return {
@@ -23,6 +25,7 @@ class Recipe:
             "might_need_ingredients": [
                 ing.to_dict() for ing in self.might_need_ingredients
             ],
+            "image": self.image,
         }
 
     @classmethod
@@ -34,6 +37,7 @@ class Recipe:
             data["tags"],
             [Ingredient(**ing) for ing in data["will_need_ingredients"]],
             [Ingredient(**ing) for ing in data["might_need_ingredients"]],
+            data.get("image"),
         )
 
 
@@ -55,6 +59,7 @@ def add_recipes(recipe_1: Recipe, recipe_2: Recipe, new_name: str = "") -> Recip
         might_need_ingredients=add_ingredients_lists(
             recipe_1.might_need_ingredients, recipe_2.might_need_ingredients
         ),
+        image=None # we don't have a way to combine images
     )
 
 
@@ -74,3 +79,15 @@ def sum_recipes(recipes: Iterable[Recipe], new_name: str = "") -> Recipe:
 
         sum_ = add_recipes(sum_, recipe, new_name)
     return sum_
+
+def load_all_recipes() -> dict[str, Recipe]:
+    """
+    Load all recipes from the recipes folder.
+    :return:    a dictionary of recipes
+    """
+
+    recipes = {}
+    for recipe_file in RECIPES_PATH.glob("*.json"):
+        recipe = Recipe.from_json(recipe_file)
+        recipes[recipe.name] = recipe
+    return recipes
