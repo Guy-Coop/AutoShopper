@@ -1,5 +1,7 @@
 from dataclasses import dataclass, field
 from .ingredient import add_ingredients_lists, Ingredient
+from pathlib import Path
+import json
 
 
 @dataclass
@@ -8,6 +10,29 @@ class Recipe:
     tags: list[str]
     will_need_ingredients: list[Ingredient]
     might_need_ingredients: list[Ingredient]
+
+    def to_dict(self):
+        return {
+            "name": self.name,
+            "tags": self.tags,
+            "will_need_ingredients": [
+                ing.to_dict() for ing in self.will_need_ingredients
+            ],
+            "might_need_ingredients": [
+                ing.to_dict() for ing in self.might_need_ingredients
+            ],
+        }
+
+    @classmethod
+    def from_json(cls, f: str | Path) -> "Recipe":
+        with open(f, "r") as file:
+            data = json.load(file)
+        return cls(
+            data["name"],
+            data["tags"],
+            [Ingredient(**ing) for ing in data["will_need_ingredients"]],
+            [Ingredient(**ing) for ing in data["might_need_ingredients"]],
+        )
 
 
 def add_recipes(recipe_1: Recipe, recipe_2: Recipe, new_name: str = "") -> Recipe:

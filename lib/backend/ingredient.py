@@ -22,6 +22,9 @@ class Ingredient:
 
         return Ingredient(self.name, self.amount + other.amount, self.unit)
 
+    def to_dict(self):
+        return {"name": self.name, "amount": self.amount, "unit": self.unit}
+
 
 def add_ingredients_lists(
     ingredients1: list[Ingredient], ingredients2: list[Ingredient]
