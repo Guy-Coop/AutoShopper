@@ -1,7 +1,7 @@
 import json
 from dataclasses import dataclass
 from pathlib import Path
-
+from typing import Iterable
 from .ingredient import add_ingredients_lists, Ingredient
 
 
@@ -55,3 +55,21 @@ def add_recipes(recipe_1: Recipe, recipe_2: Recipe, new_name: str = "") -> Recip
             recipe_1.might_need_ingredients, recipe_2.might_need_ingredients
         ),
     )
+
+
+def sum_recipes(recipes: Iterable[Recipe], new_name: str = "") -> Recipe:
+    """
+    Sum a list of recipes together.
+    :param recipes:    the list of recipes
+    :param new_name:    the name of the new recipe
+    :return:            the combined recipe
+    """
+
+    sum_ = None
+    for recipe in recipes:
+        if sum_ is None:
+            sum_ = recipe
+            continue
+
+        sum_ = add_recipes(sum_, recipe, new_name)
+    return sum_
