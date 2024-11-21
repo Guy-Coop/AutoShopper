@@ -2,7 +2,6 @@
 
 import tkinter as tk
 from tkinter import font
-
 from .pages import StartPage, RecipeSelector, IngredientDisplay
 
 

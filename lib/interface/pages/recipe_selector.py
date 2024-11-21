@@ -2,20 +2,15 @@ import tkinter as tk
 from lib.backend.recipe import load_all_recipes, Recipe
 from PIL import Image, ImageTk
 from pathlib import Path
+from ..common_components.title_bar import TitleBar
 ASSETS_PATH = Path(__file__).parent.parent.parent.parent / "recipes" / "assets"
 
 class RecipeSelector(tk.Frame):
     def __init__(self, parent, controller, *args, **kwargs):
         super().__init__(parent, *args, **kwargs)
         self.controller = controller
-        label = tk.Label(self, text="Recipe Selector", font=controller.title_font)
-        label.pack(side="top", fill="x", pady=10)
-        button_home = tk.Button(
-            self,
-            text="Back to Home",
-            command=lambda: controller.show_frame("StartPage"),
-        )
-        button_home.pack()
+        title_bar = TitleBar(self, controller, "Recipe Selector", show_home_button=True)
+        title_bar.pack(side="top", fill="x")
 
         # load all the recipes from file and display them as squares 250x250 with the recipe name, a tick box, and an image if the recipe contains the "image" key
         self.recipes = load_all_recipes()
