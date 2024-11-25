@@ -1,0 +1,97 @@
+{
+    "name": "Vegan Biryani",
+    "tags": [
+        "dietary:vegan",
+        "leftovers:true"
+    ],
+    "will_need_ingredients": [
+        {
+            "name": "Onion",
+            "amount": 1,
+            "unit": null
+        },
+        {
+            "name": "Garlic",
+            "amount": 3.0,
+            "unit": "cloves"
+        },
+        {
+            "name": "Ginger",
+            "amount": 20.0,
+            "unit": "g"
+        },
+        {
+            "name": "Red Chilli",
+            "amount": 1.0,
+            "unit": null
+        },
+        {
+            "name": "Red Pepper",
+            "amount": 1.0,
+            "unit": null
+        },
+        {
+            "name": "Aubergine",
+            "amount": 1.0,
+            "unit": null
+        },
+        {
+            "name": "Chopped Tomatoes",
+            "amount": 1.0,
+            "unit": "tin"
+        },
+        {
+            "name": "Cauliflower",
+            "amount": 1.0,
+            "unit": null
+        },
+        {
+            "name": "Fresh Coriander",
+            "amount": 0.1,
+            "unit": null
+        },
+        {
+            "name": "Flame Raisins",
+            "amount": 40.0,
+            "unit": "g"
+        },
+        {
+            "name": "Cashew Nuts (Unsalted)",
+            "amount": 50.0,
+            "unit": "g"
+        }
+    ],
+    "might_need_ingredients": [
+        {
+            "name": "Brown Basmati Rice",
+            "amount": 240.0,
+            "unit": "g"
+        },
+        {
+            "name": "Vegetable Oil",
+            "amount": 1,
+            "unit": null
+        },
+        {
+            "name": "Cinnamon Stick",
+            "amount": 1.0,
+            "unit": null
+        },
+        {
+            "name": "Cumin Seeds",
+            "amount": 1.5,
+            "unit": "tsp"
+        },
+        {
+            "name": "Curry Powder",
+            "amount": 2.0,
+            "unit": "tbsp"
+        },
+        {
+            "name": "Low Salt Vegetable Stock",
+            "amount": 1.0,
+            "unit": "cube"
+        }
+    ],
+    "image": null
+}

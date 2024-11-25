@@ -4,6 +4,7 @@ THIS_WEEKS_RECIPES = [
     "Chicken and Rice Peri Peri",
     "Healthy Fish and Chips",
     #"Salmon with Black Beans",
+    "Vegan Biryani",
 ]
 
 
