@@ -1,6 +1,7 @@
 import tkinter as tk
 from ..common_components.title_bar import TitleBar
 
+
 class StartPage(tk.Frame):
     def __init__(self, parent, controller, *args, **kwargs):
         super().__init__(parent, *args, **kwargs)

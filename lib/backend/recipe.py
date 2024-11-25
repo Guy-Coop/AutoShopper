@@ -7,6 +7,7 @@ from .ingredient import add_ingredients_lists, Ingredient
 
 RECIPES_PATH = Path(__file__).parent.parent.parent / "recipes"
 
+
 @dataclass
 class Recipe:
     name: str
@@ -59,7 +60,7 @@ def add_recipes(recipe_1: Recipe, recipe_2: Recipe, new_name: str = "") -> Recip
         might_need_ingredients=add_ingredients_lists(
             recipe_1.might_need_ingredients, recipe_2.might_need_ingredients
         ),
-        image=None # we don't have a way to combine images
+        image=None,  # we don't have a way to combine images
     )
 
 
@@ -79,6 +80,7 @@ def sum_recipes(recipes: Iterable[Recipe], new_name: str = "") -> Recipe:
 
         sum_ = add_recipes(sum_, recipe, new_name)
     return sum_
+
 
 def load_all_recipes() -> dict[str, Recipe]:
     """
