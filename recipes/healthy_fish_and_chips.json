@@ -1,0 +1,57 @@
+{
+    "name": "Healthy Fish and Chips",
+    "tags": [
+        "dietary:fish",
+        "babyFriendly:high"
+    ],
+    "will_need_ingredients": [
+        {
+            "name": "Potatoes",
+            "amount": 3.0,
+            "unit": null
+        },
+        {
+            "name": "Cod",
+            "amount": 2.0,
+            "unit": "fillets"
+        },
+        {
+            "name": "Lemon",
+            "amount": 2.0,
+            "unit": null
+        },
+        {
+            "name": "Parsley",
+            "amount": 0.1,
+            "unit": null
+        },
+        {
+            "name": "Capers",
+            "amount": 15.0,
+            "unit": "g"
+        },
+        {
+            "name": "Plain Oat Yoghurt",
+            "amount": 100.0,
+            "unit": "g"
+        }
+    ],
+    "might_need_ingredients": [
+        {
+            "name": "Olive Oil",
+            "amount": 1,
+            "unit": null
+        },
+        {
+            "name": "Salt",
+            "amount": 1,
+            "unit": null
+        },
+        {
+            "name": "Pepper",
+            "amount": 1,
+            "unit": null
+        }
+    ],
+    "image": null
+}
