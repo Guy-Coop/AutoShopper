@@ -1,0 +1,41 @@
+{
+    "name": "Guys Sandwich Lunch",
+    "tags": [
+        "dietary:meat"
+    ],
+    "will_need_ingredients": [
+        {
+            "name": "Crusty White Bread",
+            "amount": 1.0,
+            "unit": "loaf"
+        },
+        {
+            "name": "Ham",
+            "amount": 1.0,
+            "unit": "pack"
+        },
+        {
+            "name": "Coleslaw",
+            "amount": 150.0,
+            "unit": "g"
+        }
+    ],
+    "might_need_ingredients": [
+        {
+            "name": "Cheese",
+            "amount": 0.25,
+            "unit": "pack"
+        },
+        {
+            "name": "Gherkins",
+            "amount": 0.25,
+            "unit": "jar"
+        },
+        {
+            "name": "Butter",
+            "amount": 0.1,
+            "unit": "tub"
+        }
+    ],
+    "image": "ham_and_cheese.jpeg"
+}
